@@ -1,0 +1,19 @@
+@use "../../partials/mixins" as *;
+.project {
+  background-color: white;
+  padding: 1rem;
+  border: 2px solid black;
+  @include flex(column, flex-start, flex-start);
+  width: 35rem;
+  &__title-wrapper {
+    @include flex(row, flex-start, flex-end);
+    margin-bottom: 0.7rem;
+  }
+  &__img {
+    height: 1.6rem;
+    margin-right: 0.8rem;
+  }
+  &__description {
+    margin-bottom: 0.7rem;
+  }
+}
