@@ -29,8 +29,7 @@ function Flow() {
         fitView
         onNodesChange={onNodesChange}
         onEdgesChange={onEdgesChange}
-        nodeTypes={nodeTypes}
-        panOnScroll>
+        nodeTypes={nodeTypes}>
         <Background variant="lines" />
         <Controls />
       </ReactFlow>
