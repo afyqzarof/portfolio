@@ -1,0 +1,12 @@
+@use "../../partials/mixins" as *;
+.intro {
+  @include flex(row, space-between, flex-start);
+  background-color: white;
+  border: 2px solid rgb(39, 38, 38);
+  padding: 1rem;
+
+  &__img {
+    width: 7rem;
+    margin-right: 1rem;
+  }
+}

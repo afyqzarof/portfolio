@@ -4,31 +4,63 @@ import ReactFlow, {
   Node,
   useNodesState,
   useEdgesState,
+  NodeTypes,
 } from "reactflow";
 import "./Flow.scss";
 import "reactflow/dist/base.css";
+import Intro from "../Intro/Intro";
+const nodeTypes: NodeTypes = {
+  Intro,
+};
 
 const initialEdges = [
   {
     id: "1-2",
     source: "1",
     target: "2",
-    label: "to the",
+    label: "my projects",
     type: "step",
+    animated: true,
+  },
+  {
+    id: "2-3",
+    source: "2",
+    target: "3",
+    label: "next",
+    type: "step",
+    animated: true,
+  },
+  {
+    id: "2-4",
+    source: "2",
+    target: "4",
+    label: "next",
+    type: "step",
+    animated: true,
   },
 ];
 
 const initialNodes: Node[] = [
   {
     id: "1",
-    data: { label: "Hello" },
+    data: {},
     position: { x: 0, y: 0 },
-    type: "input",
+    type: "Intro",
   },
   {
     id: "2",
-    data: { label: "World" },
-    position: { x: 100, y: 100 },
+    data: { label: "Projects" },
+    position: { x: 400, y: 400 },
+  },
+  {
+    id: "3",
+    data: { label: "next one" },
+    position: { x: 300, y: 600 },
+  },
+  {
+    id: "4",
+    data: { label: "next one one" },
+    position: { x: 600, y: 600 },
   },
 ];
 
@@ -42,7 +74,8 @@ function Flow() {
         edges={edges}
         fitView
         onNodesChange={onNodesChange}
-        onEdgesChange={onEdgesChange}>
+        onEdgesChange={onEdgesChange}
+        nodeTypes={nodeTypes}>
         <Background variant="lines" />
         <Controls />
       </ReactFlow>
