@@ -34,7 +34,12 @@ const Header = () => {
         <button type="button" className="nav__btn">
           about
         </button>
-        <button type="button" className="nav__btn">
+        <button
+          type="button"
+          className="nav__btn"
+          onClick={() => {
+            handleTransform(1200, 850, 1.5, 1000);
+          }}>
           contact
         </button>
       </nav>
