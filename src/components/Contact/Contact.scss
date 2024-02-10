@@ -34,6 +34,24 @@
     height: 10rem;
     resize: none;
   }
+  &__error {
+    font-size: 0.7rem;
+    color: rgb(200, 13, 13);
+  }
+
+  &__count-wrapper {
+    position: relative;
+    @include flex(row, space-between);
+    width: 100%;
+    height: 1rem;
+  }
+
+  &__count {
+    position: absolute;
+    align-self: flex-end;
+    font-size: 0.7rem;
+    right: 0;
+  }
 
   &__btn {
     background-color: black;

@@ -38,7 +38,8 @@ function Flow() {
           defaultViewport={{ x: 300, y: 200, zoom: 4 }}
           onNodesChange={onNodesChange}
           onEdgesChange={onEdgesChange}
-          nodeTypes={nodeTypes}>
+          nodeTypes={nodeTypes}
+          deleteKeyCode={null}>
           <Background variant={BackgroundVariant.Lines} />
           <Controls />
           <MiniMap zoomable pannable />
