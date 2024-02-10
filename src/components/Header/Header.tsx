@@ -40,7 +40,7 @@ const Header = () => {
           type="button"
           className="nav__btn"
           onClick={() => {
-            console.log(screenWidth);
+            handleTransform(1600, -400, 1, 1000);
           }}>
           about
         </button>

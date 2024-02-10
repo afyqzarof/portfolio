@@ -5,6 +5,7 @@ import ReactFlow, {
   useEdgesState,
   NodeTypes,
   MiniMap,
+  BackgroundVariant,
 } from "reactflow";
 import "./Flow.scss";
 import "reactflow/dist/base.css";
@@ -15,11 +16,13 @@ import initialNodes from "../../data/initialNodes";
 import initialEdges from "../../data/initialEdges";
 import Header from "../Header/Header";
 import Contact from "../Contact/Contact";
+import AboutMe from "../AboutMe/AboutMe";
 const nodeTypes: NodeTypes = {
   Intro,
   Title,
   ProjectCard,
   Contact,
+  AboutMe,
 };
 
 function Flow() {
@@ -36,7 +39,7 @@ function Flow() {
           onNodesChange={onNodesChange}
           onEdgesChange={onEdgesChange}
           nodeTypes={nodeTypes}>
-          <Background variant="lines" />
+          <Background variant={BackgroundVariant.Lines} />
           <Controls />
           <MiniMap zoomable pannable />
         </ReactFlow>

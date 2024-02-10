@@ -37,6 +37,14 @@ const initialEdges: Edge[] = [
     animated: true,
     targetHandle: "intro-left",
   },
+  {
+    id: "about-about-me",
+    source: "about-me",
+    target: "about",
+    type: "step",
+    animated: true,
+    targetHandle: "intro-left",
+  },
 ];
 
 export default initialEdges;

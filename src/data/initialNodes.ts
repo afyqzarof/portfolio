@@ -71,6 +71,12 @@ const initialNodes: Node[] = [
     position: { x: -700, y: 700 },
     type: "Title",
   },
+  {
+    id: "about-me",
+    data: {},
+    position: { x: -1400, y: 700 },
+    type: "AboutMe",
+  },
 ];
 
 export default initialNodes;
