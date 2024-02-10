@@ -14,8 +14,8 @@ const ProjectCard = ({ data }: NodeProps) => {
         <h3>{data.name}</h3>
       </div>
       <p className="project__description">{data.description}</p>
-      {data.links?.map((link: Link) => (
-        <a href={link.url} rel="noopener" target="_blank">
+      {data.links?.map((link: Link, index: number) => (
+        <a href={link.url} rel="noopener" target="_blank" key={index}>
           {link.name}
         </a>
       ))}

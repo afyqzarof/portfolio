@@ -4,6 +4,7 @@ import ReactFlow, {
   useNodesState,
   useEdgesState,
   NodeTypes,
+  MiniMap,
 } from "reactflow";
 import "./Flow.scss";
 import "reactflow/dist/base.css";
@@ -12,6 +13,7 @@ import Title from "../Title/Title";
 import ProjectCard from "../ProjectCard/ProjectCard";
 import initialNodes from "../../data/initialNodes";
 import initialEdges from "../../data/initialEdges";
+import Header from "../Header/Header";
 const nodeTypes: NodeTypes = {
   Intro,
   Title,
@@ -22,18 +24,22 @@ function Flow() {
   const [nodes, _setNodes, onNodesChange] = useNodesState(initialNodes);
   const [edges, _setEdges, onEdgesChange] = useEdgesState(initialEdges);
   return (
-    <main className="main">
-      <ReactFlow
-        nodes={nodes}
-        edges={edges}
-        fitView
-        onNodesChange={onNodesChange}
-        onEdgesChange={onEdgesChange}
-        nodeTypes={nodeTypes}>
-        <Background variant="lines" />
-        <Controls />
-      </ReactFlow>
-    </main>
+    <div className="page-wrapper">
+      <Header />
+      <main className="main">
+        <ReactFlow
+          nodes={nodes}
+          edges={edges}
+          defaultViewport={{ x: 420, y: 200, zoom: 10 }}
+          onNodesChange={onNodesChange}
+          onEdgesChange={onEdgesChange}
+          nodeTypes={nodeTypes}>
+          <Background variant="lines" />
+          <Controls />
+          <MiniMap zoomable pannable />
+        </ReactFlow>
+      </main>
+    </div>
   );
 }
 

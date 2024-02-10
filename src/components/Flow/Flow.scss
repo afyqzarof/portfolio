@@ -1,3 +1,10 @@
-.main {
+@use "../../partials/mixins" as *;
+.page-wrapper {
+  @include flex(column);
   height: 100vh;
+}
+
+.main {
+  flex: 1;
+  width: 100vw;
 }
