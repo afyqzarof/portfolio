@@ -47,6 +47,10 @@ const initialNodes: Node[] = [
         "A website to help individuals learn to code that is inspired by the rubber duck method",
       links: [
         {
+          name: "website",
+          url: "https://debug-ducky.bochynski-ng.com",
+        },
+        {
           name: "github",
           url: "https://github.com/afyqzarof/hackathon-debug-ducky",
         },
@@ -54,6 +58,12 @@ const initialNodes: Node[] = [
     },
     position: { x: 1200, y: 500 },
     type: "ProjectCard",
+  },
+  {
+    id: "contact",
+    data: {},
+    position: { x: -500, y: -500 },
+    type: "Contact",
   },
 ];
 

@@ -14,10 +14,12 @@ import ProjectCard from "../ProjectCard/ProjectCard";
 import initialNodes from "../../data/initialNodes";
 import initialEdges from "../../data/initialEdges";
 import Header from "../Header/Header";
+import Contact from "../Contact/Contact";
 const nodeTypes: NodeTypes = {
   Intro,
   Title,
   ProjectCard,
+  Contact,
 };
 
 function Flow() {

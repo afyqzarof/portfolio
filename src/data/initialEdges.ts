@@ -21,6 +21,13 @@ const initialEdges: Edge[] = [
     type: "step",
     animated: true,
   },
+  {
+    id: "intro-contact",
+    source: "contact",
+    target: "intro",
+    type: "step",
+    animated: true,
+  },
 ];
 
 export default initialEdges;

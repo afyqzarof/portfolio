@@ -1,0 +1,46 @@
+@use "../../partials/mixins" as *;
+
+.contact {
+  padding: 1rem;
+  background-color: white;
+  border: 2px solid black;
+  width: 20rem;
+}
+
+.form {
+  @include flex(column, flex-start, flex-start);
+  width: 100%;
+  &__label {
+    font-family: secondary-font;
+    margin-top: 0.5rem;
+    margin-bottom: 0.2rem;
+  }
+
+  &__input {
+    width: 100%;
+    padding: 0.3rem;
+    font-family: secondary-font;
+    &::placeholder {
+      font-family: secondary-font;
+    }
+    &:focus {
+      outline: none;
+      border: 2px solid black;
+    }
+  }
+
+  &__textarea {
+    @extend .form__input;
+    height: 10rem;
+    resize: none;
+  }
+
+  &__btn {
+    background-color: black;
+    padding: 0.3rem 1rem;
+    color: white;
+    margin-top: 1rem;
+    font-weight: 700;
+    font-size: 1rem;
+  }
+}
