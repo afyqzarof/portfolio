@@ -8,7 +8,7 @@ const Title = ({ data }: NodeProps<TitleData>) => {
   return (
     <article className="title">
       <Handle position={Position.Left} type="target" />
-      <p>{data.title}</p>
+      <h2 className="title__title">{data.title}</h2>
       <Handle position={Position.Right} type="source" />
     </article>
   );

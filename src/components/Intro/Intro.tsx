@@ -8,7 +8,7 @@ const Intro = ({ isConnectable }) => {
       <img src={headShot} alt="professional head shot" className="intro__img" />
       <div>
         <h1>Hello, I'm Afyq</h1>
-        <p>I am a FullStack Developer</p>
+        <p className="intro__description">I am a FullStack Developer</p>
       </div>
       <Handle
         type="source"

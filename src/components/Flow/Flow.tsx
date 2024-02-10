@@ -30,7 +30,7 @@ function Flow() {
         <ReactFlow
           nodes={nodes}
           edges={edges}
-          defaultViewport={{ x: 420, y: 200, zoom: 10 }}
+          defaultViewport={{ x: 300, y: 200, zoom: 4 }}
           onNodesChange={onNodesChange}
           onEdgesChange={onEdgesChange}
           nodeTypes={nodeTypes}>
