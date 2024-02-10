@@ -4,6 +4,7 @@ import { useReactFlow } from "reactflow";
 
 const Header = () => {
   const { setViewport } = useReactFlow();
+  const screenWidth = window.innerWidth;
   const handleTransform = (
     x: number,
     y: number,
@@ -19,6 +20,10 @@ const Header = () => {
           type="button"
           className="nav__btn"
           onClick={() => {
+            if (screenWidth <= 425) {
+              handleTransform(20, 100, 1, 800);
+              return;
+            }
             handleTransform(300, 200, 3, 800);
           }}>
           home
@@ -31,7 +36,12 @@ const Header = () => {
           }}>
           projects
         </button>
-        <button type="button" className="nav__btn">
+        <button
+          type="button"
+          className="nav__btn"
+          onClick={() => {
+            console.log(screenWidth);
+          }}>
           about
         </button>
         <button

@@ -6,6 +6,7 @@ const initialEdges: Edge[] = [
     target: "projects",
     type: "step",
     animated: true,
+    sourceHandle: "bottom",
   },
   {
     id: "2-3",
@@ -27,6 +28,14 @@ const initialEdges: Edge[] = [
     target: "intro",
     type: "step",
     animated: true,
+  },
+  {
+    id: "intro-about",
+    source: "about",
+    target: "intro",
+    type: "step",
+    animated: true,
+    targetHandle: "intro-left",
   },
 ];
 

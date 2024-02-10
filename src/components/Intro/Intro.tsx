@@ -16,10 +16,11 @@ const Intro = ({ isConnectable }: NodeProps) => {
         <h1>Hello, I'm Afyq</h1>
         <p className="intro__description">I am a FullStack Developer</p>
       </div>
+      <Handle type="target" position={Position.Left} id="intro-left" />
       <Handle
         type="source"
         position={Position.Bottom}
-        id="b"
+        id="bottom"
         isConnectable={isConnectable}
       />
     </article>
