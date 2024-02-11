@@ -3,7 +3,7 @@
 .nav {
   @include flex(column, space-between, flex-end);
   position: absolute;
-  bottom: 50%;
+  bottom: 40%;
   right: 0;
   z-index: 100;
   &__btn {

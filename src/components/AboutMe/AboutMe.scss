@@ -1,8 +1,8 @@
+@use "../../partials/mixins" as *;
+
 .about-me {
-  background-color: white;
-  border: 2px solid black;
+  @include card;
   width: 35rem;
-  padding: 1rem;
   padding-bottom: 0;
 
   &__para {

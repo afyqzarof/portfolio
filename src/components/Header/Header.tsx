@@ -51,6 +51,9 @@ const Header = () => {
         }}>
         contact
       </button>
+      <button type="button" className="nav__btn">
+        links
+      </button>
     </nav>
   );
 };

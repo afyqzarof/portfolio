@@ -44,7 +44,7 @@ function Flow() {
             id="2"
             variant={BackgroundVariant.Dots}
             className="background"
-            color="#ec8888"
+            color="#aaa"
             gap={100}
             size={4}
           />

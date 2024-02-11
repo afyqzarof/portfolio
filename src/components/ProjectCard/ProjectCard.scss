@@ -1,8 +1,6 @@
 @use "../../partials/mixins" as *;
 .project {
-  background-color: white;
-  padding: 1rem;
-  border: 2px solid black;
+  @include card;
   @include flex(column, flex-start, flex-start);
   width: 35rem;
   &__title-wrapper {
