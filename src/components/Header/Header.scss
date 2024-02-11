@@ -7,15 +7,16 @@
   right: 0;
   z-index: 100;
   &__btn {
-    // color: white;
-
+    color: rgb(243, 31, 31);
     font-weight: 700;
     margin-right: 1rem;
     font-size: 3rem;
     transition: all 100ms ease-in;
+    padding: 0 1rem;
     &:hover {
       font-size: 4rem;
-      // color: yellow;
+      color: yellow;
+      background-color: black;
     }
   }
 }

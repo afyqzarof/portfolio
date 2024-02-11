@@ -23,7 +23,7 @@ const Header = () => {
             handleTransform(20, 100, 1, 800);
             return;
           }
-          handleTransform(300, 200, 3, 800);
+          handleTransform(300, 200, 2, 800);
         }}>
         home
       </button>
@@ -47,7 +47,7 @@ const Header = () => {
         type="button"
         className="nav__btn"
         onClick={() => {
-          handleTransform(1200, 850, 1.5, 1000);
+          handleTransform(1200, 850, 1.3, 1000);
         }}>
         contact
       </button>

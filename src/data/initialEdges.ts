@@ -5,7 +5,6 @@ const initialEdges: Edge[] = [
     source: "intro",
     target: "projects",
     type: "step",
-    animated: true,
     sourceHandle: "bottom",
   },
   {
@@ -13,28 +12,25 @@ const initialEdges: Edge[] = [
     source: "projects",
     target: "studio",
     type: "step",
-    animated: true,
   },
   {
     id: "2-4",
     source: "projects",
     target: "4",
     type: "step",
-    animated: true,
   },
   {
     id: "intro-contact",
     source: "contact",
     target: "intro",
     type: "step",
-    animated: true,
   },
   {
     id: "intro-about",
     source: "about",
     target: "intro",
     type: "step",
-    animated: true,
+
     targetHandle: "intro-left",
   },
   {
@@ -42,7 +38,7 @@ const initialEdges: Edge[] = [
     source: "about-me",
     target: "about",
     type: "step",
-    animated: true,
+
     targetHandle: "intro-left",
   },
 ];

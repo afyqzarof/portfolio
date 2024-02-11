@@ -40,7 +40,14 @@ function Flow() {
           onEdgesChange={onEdgesChange}
           nodeTypes={nodeTypes}
           deleteKeyCode={null}>
-          <Background variant={BackgroundVariant.Lines} />
+          <Background
+            id="2"
+            variant={BackgroundVariant.Dots}
+            className="background"
+            color="#ec8888"
+            gap={100}
+            size={4}
+          />
           <Controls />
           <MiniMap zoomable pannable />
         </ReactFlow>

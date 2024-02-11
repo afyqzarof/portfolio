@@ -100,7 +100,7 @@ const Contact = ({ isConnectable }: NodeProps) => {
           name="message"
           id="message"
           className="form__textarea"
-          placeholder="enter message"
+          placeholder="how can i help?"
           onChange={handleChange}
           value={formFields.message}
         />
