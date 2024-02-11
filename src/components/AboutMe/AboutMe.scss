@@ -1,6 +1,13 @@
 .about-me {
   background-color: white;
   border: 2px solid black;
-  width: 30rem;
+  width: 35rem;
   padding: 1rem;
+  padding-bottom: 0;
+
+  &__para {
+    font-family: secondary-font;
+    line-height: 130%;
+    margin-bottom: 1rem;
+  }
 }

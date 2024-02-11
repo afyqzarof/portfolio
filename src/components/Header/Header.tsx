@@ -39,7 +39,7 @@ const Header = () => {
         type="button"
         className="nav__btn"
         onClick={() => {
-          handleTransform(1600, -400, 1, 1000);
+          handleTransform(1100, -600, 1.2, 1000);
         }}>
         about
       </button>

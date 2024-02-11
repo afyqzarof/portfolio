@@ -74,7 +74,7 @@ const initialNodes: Node[] = [
   {
     id: "about-me",
     data: {},
-    position: { x: -1400, y: 700 },
+    position: { x: -750, y: 800 },
     type: "AboutMe",
   },
 ];
