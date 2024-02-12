@@ -1,12 +1,14 @@
 @use "../../partials/mixins" as *;
 .links {
   @include card;
-
+  width: 20rem;
+  height: 10rem;
+  @include flex(row, space-around);
   &__logo {
     height: 7rem;
-
-    &--left {
-      margin-right: 1rem;
+    transition: all 100ms ease-in;
+    &:hover {
+      height: 7.5rem;
     }
   }
 }

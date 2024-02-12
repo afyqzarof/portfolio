@@ -33,6 +33,7 @@
     resize: none;
   }
   &__error {
+    width: 70%;
     font-size: 0.7rem;
     color: rgb(200, 13, 13);
   }
@@ -58,5 +59,9 @@
     margin-top: 1rem;
     font-weight: 700;
     font-size: 1rem;
+
+    &--success {
+      background-color: rgb(3, 175, 3);
+    }
   }
 }

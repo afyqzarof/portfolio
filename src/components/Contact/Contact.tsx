@@ -1,8 +1,13 @@
 import React, { useState } from "react";
 import "./Contact.scss";
 import { NodeProps, Handle, Position } from "reactflow";
+import emailjs from "@emailjs/browser";
 
 const Contact = ({ isConnectable }: NodeProps) => {
+  const serviceId = import.meta.env.VITE_SERVICE_ID;
+  const templateId = import.meta.env.VITE_TEMPLATE_ID;
+  const publicKey = import.meta.env.VITE_PUBLIC_KEY;
+  const [success, setSuccess] = useState(false);
   const maxChar = 250;
   const [formFields, setFormFields] = useState({
     name: "",
@@ -51,13 +56,32 @@ const Contact = ({ isConnectable }: NodeProps) => {
       });
     }
   };
-  const handleSubmit = (e: React.ChangeEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.ChangeEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (!isFormError()) {
       console.log("form not valid");
       return;
     }
-    console.log(formFields);
+    try {
+      await emailjs.sendForm(serviceId, templateId, e.target, {
+        publicKey,
+      });
+      setSuccess(true);
+      setFormFields({
+        name: "",
+        email: "",
+        message: "",
+      });
+      setTimeout(() => {
+        setSuccess(false);
+      }, 1000);
+    } catch (error) {
+      console.log(error);
+      setFormErrors({
+        ...formErrors,
+        message: "failed to send message. please try again later",
+      });
+    }
   };
   return (
     <article className="contact">
@@ -79,6 +103,7 @@ const Contact = ({ isConnectable }: NodeProps) => {
           placeholder="enter name"
           className="form__input"
           onChange={handleChange}
+          value={formFields.name}
         />
         {formErrors.name && <p className="form__error">{formErrors.name}</p>}
         <label htmlFor="email" className="form__label">
@@ -91,6 +116,7 @@ const Contact = ({ isConnectable }: NodeProps) => {
           className="form__input"
           placeholder="enter email"
           onChange={handleChange}
+          value={formFields.email}
         />
         {formErrors.email && <p className="form__error">{formErrors.email}</p>}
         <label htmlFor="message" className="form__label">
@@ -112,8 +138,10 @@ const Contact = ({ isConnectable }: NodeProps) => {
             {formFields.message.length}/{maxChar}
           </p>
         </div>
-        <button type="submit" className="form__btn">
-          send
+        <button
+          type="submit"
+          className={success ? "form__btn form__btn--success" : "form__btn"}>
+          {success ? "sent" : "send"}
         </button>
       </form>
     </article>
