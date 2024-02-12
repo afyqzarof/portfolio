@@ -1,4 +1,6 @@
 import { Node } from "reactflow";
+import studioLogo from "../assets/images/studio-flavicon.svg";
+import duckyLogo from "../assets/images/duck-logo.svg";
 
 const initialNodes: Node[] = [
   {
@@ -17,7 +19,7 @@ const initialNodes: Node[] = [
     id: "studio",
     data: {
       name: "studio",
-      imgSrc: "/src/assets/images/studio-flavicon.svg",
+      imgSrc: studioLogo,
       description:
         "An all-in-one platform for creative project processes and idea articulation",
       links: [
@@ -42,7 +44,7 @@ const initialNodes: Node[] = [
     id: "4",
     data: {
       name: "debug_ducky",
-      imgSrc: "/src/assets/images/duck-logo.svg",
+      imgSrc: duckyLogo,
       description:
         "A website to help individuals learn to code that is inspired by the rubber duck method",
       links: [
