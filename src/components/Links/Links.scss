@@ -1,0 +1,12 @@
+@use "../../partials/mixins" as *;
+.links {
+  @include card;
+
+  &__logo {
+    height: 7rem;
+
+    &--left {
+      margin-right: 1rem;
+    }
+  }
+}

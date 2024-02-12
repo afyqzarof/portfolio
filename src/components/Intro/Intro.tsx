@@ -40,6 +40,7 @@ const Intro = ({ isConnectable }: NodeProps) => {
         <p>thanks for coming to my website!</p>
       </div>
       <Handle type="target" position={Position.Left} id="intro-left" />
+      <Handle type="source" position={Position.Right} id="intro-right" />
       <Handle
         type="source"
         position={Position.Bottom}

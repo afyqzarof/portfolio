@@ -17,12 +17,14 @@ import initialEdges from "../../data/initialEdges";
 import Header from "../Header/Header";
 import Contact from "../Contact/Contact";
 import AboutMe from "../AboutMe/AboutMe";
+import Links from "../Links/Links";
 const nodeTypes: NodeTypes = {
   Intro,
   Title,
   ProjectCard,
   Contact,
   AboutMe,
+  Links,
 };
 
 function Flow() {

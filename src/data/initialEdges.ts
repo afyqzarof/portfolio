@@ -41,6 +41,18 @@ const initialEdges: Edge[] = [
 
     targetHandle: "intro-left",
   },
+  {
+    id: "intro-links",
+    source: "intro",
+    target: "links",
+    type: "step",
+  },
+  {
+    id: "links-links",
+    source: "links",
+    target: "link-card",
+    type: "step",
+  },
 ];
 
 export default initialEdges;

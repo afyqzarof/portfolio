@@ -16,8 +16,12 @@ const AboutMe = ({ isConnectable }: NodeProps) => {
       <p className="about-me__para">
         Beyond the realm of technology, I am a self-taught independent musician,
         proficient in writing, producing, and distributing my music across major
-        streaming platforms. Successfully balancing these dual passions is a
-        testament to my effective time management skills.
+        streaming platforms. I have had the opportunity to perform around london
+        and collaborate with other artists of various different backgrounds.
+      </p>
+      <p className="about-me__para">
+        My creative knowledge and experience facilitate in my approach to
+        problem solving as it diversifies my perspective on a challenge.
       </p>
       <Handle
         position={Position.Left}
