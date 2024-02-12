@@ -13,14 +13,17 @@ const Header = () => {
   ): void => {
     setViewport({ x, y, zoom }, { duration });
   };
+  const mobile = (): boolean => {
+    return screenWidth <= 480;
+  };
   return (
     <nav className="nav">
       <button
         type="button"
         className="nav__btn"
         onClick={() => {
-          if (screenWidth <= 425) {
-            handleTransform(20, 100, 1, 800);
+          if (mobile()) {
+            handleTransform(30, 200, 0.9, 800);
             return;
           }
           handleTransform(300, 200, 2, 800);
@@ -31,6 +34,10 @@ const Header = () => {
         type="button"
         className="nav__btn"
         onClick={() => {
+          if (mobile()) {
+            handleTransform(-100, 0, 0.4, 1000);
+            return;
+          }
           handleTransform(-200, -100, 1, 1000);
         }}>
         projects
@@ -39,6 +46,10 @@ const Header = () => {
         type="button"
         className="nav__btn"
         onClick={() => {
+          if (mobile()) {
+            handleTransform(500, -300, 0.6, 1000);
+            return;
+          }
           handleTransform(1100, -600, 1.2, 1000);
         }}>
         about
@@ -47,6 +58,10 @@ const Header = () => {
         type="button"
         className="nav__btn"
         onClick={() => {
+          if (mobile()) {
+            handleTransform(500, 500, 0.8, 1000);
+            return;
+          }
           handleTransform(1200, 850, 1.3, 1000);
         }}>
         contact
@@ -55,6 +70,10 @@ const Header = () => {
         type="button"
         className="nav__btn"
         onClick={() => {
+          if (mobile()) {
+            handleTransform(-320, 600, 0.5, 1000);
+            return;
+          }
           handleTransform(-800, 1300, 1.3, 1000);
         }}>
         links

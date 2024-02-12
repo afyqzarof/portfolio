@@ -1,10 +1,17 @@
 @use "../../partials/mixins" as *;
+@use "../../partials/breakpoints" as *;
 .page-wrapper {
   @include flex(column);
-  height: 100vh;
+  height: 100dvh;
 }
 
 .main {
   flex: 1;
   width: 100vw;
+}
+
+.minimap {
+  @include mobile {
+    display: none;
+  }
 }

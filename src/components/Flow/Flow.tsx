@@ -30,6 +30,10 @@ const nodeTypes: NodeTypes = {
 function Flow() {
   const [nodes, _setNodes, onNodesChange] = useNodesState(initialNodes);
   const [edges, _setEdges, onEdgesChange] = useEdgesState(initialEdges);
+  const screenWidth = window.innerWidth;
+  const mobile = (): boolean => {
+    return screenWidth <= 480;
+  };
   return (
     <div className="page-wrapper">
       <Header />
@@ -37,7 +41,11 @@ function Flow() {
         <ReactFlow
           nodes={nodes}
           edges={edges}
-          defaultViewport={{ x: 300, y: 200, zoom: 4 }}
+          defaultViewport={
+            mobile()
+              ? { x: 30, y: 200, zoom: 0.9 }
+              : { x: 300, y: 200, zoom: 4 }
+          }
           onNodesChange={onNodesChange}
           onEdgesChange={onEdgesChange}
           nodeTypes={nodeTypes}
@@ -51,7 +59,7 @@ function Flow() {
             size={4}
           />
           <Controls />
-          <MiniMap zoomable pannable />
+          <MiniMap zoomable pannable className="minimap" />
         </ReactFlow>
       </main>
     </div>

@@ -1,7 +1,13 @@
+@use "../../partials/breakpoints" as *;
+
 .title {
   padding: 1rem;
 
   &__title {
     font-size: 4rem;
+
+    @include mobile {
+      font-size: 3.5rem;
+    }
   }
 }
