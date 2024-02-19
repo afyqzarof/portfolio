@@ -18,6 +18,7 @@ import Header from "../Header/Header";
 import Contact from "../Contact/Contact";
 import AboutMe from "../AboutMe/AboutMe";
 import Links from "../Links/Links";
+import DarkModeBtn from "../DarkModeBtn/DarkModeBtn";
 const nodeTypes: NodeTypes = {
   Intro,
   Title,
@@ -37,6 +38,7 @@ function Flow() {
   return (
     <div className="page-wrapper">
       <Header />
+      <DarkModeBtn />
       <main className="main">
         <ReactFlow
           nodes={nodes}
