@@ -2,10 +2,12 @@ import "./Intro.scss";
 import { Handle, NodeProps, Position } from "reactflow";
 import headShot from "../../assets/images/afyq-zarof-headshot.jpg";
 import { TypeAnimation } from "react-type-animation";
+import useIsDark from "../../hooks/useIsDark";
 
 const Intro = ({ isConnectable }: NodeProps) => {
+  const isDark = useIsDark();
   return (
-    <article className="intro">
+    <article className={isDark ? "intro intro--dark" : "intro"}>
       <Handle
         type="target"
         position={Position.Top}
@@ -14,8 +16,13 @@ const Intro = ({ isConnectable }: NodeProps) => {
       />
       <img src={headShot} alt="professional head shot" className="intro__img" />
       <div>
-        <h1>Hello, I'm Afyq</h1>
-        <p className="intro__description">
+        <h1 className={isDark ? "intro__title--dark" : "intro__title"}>
+          Hello, I'm Afyq
+        </h1>
+        <p
+          className={`intro__description ${
+            isDark ? "intro__description--dark" : ""
+          }`}>
           I'm a{" "}
           <TypeAnimation
             sequence={[
@@ -35,9 +42,17 @@ const Intro = ({ isConnectable }: NodeProps) => {
             wrapper="span"
             speed={50}
             repeat={Infinity}
+            className={`intro__description ${
+              isDark ? "intro__description--dark" : ""
+            }`}
           />
         </p>
-        <p>thanks for coming to my website!</p>
+        <p
+          className={`intro__description ${
+            isDark ? "intro__description--dark" : ""
+          }`}>
+          thanks for coming to my website!
+        </p>
       </div>
       <Handle type="target" position={Position.Left} id="intro-left" />
       <Handle type="source" position={Position.Right} id="intro-right" />

@@ -37,7 +37,7 @@ function Flow() {
     return screenWidth <= 480;
   };
   const isDark = useIsDark();
-  console.log(isDark);
+  // console.log(isDark);
 
   return (
     <div className="page-wrapper">
@@ -59,8 +59,8 @@ function Flow() {
           <Background
             id="2"
             variant={BackgroundVariant.Dots}
-            className="background"
-            color="#aaa"
+            className={isDark ? "background background--dark" : "background"}
+            color={isDark ? "#eee" : "#aaa"}
             gap={100}
             size={4}
           />

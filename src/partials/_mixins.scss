@@ -14,3 +14,9 @@
   background-color: white;
   border: 6px solid rgb(0, 0, 0);
 }
+
+@mixin card-dark {
+  padding: 1rem;
+  background-color: rgb(21, 17, 17);
+  border: 6px solid rgb(88, 87, 87);
+}

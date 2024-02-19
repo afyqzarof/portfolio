@@ -2,6 +2,15 @@
 .intro {
   @include flex(row, flex-start, flex-start);
   @include card;
+  &--dark {
+    @include card-dark;
+  }
+
+  &__title {
+    &--dark {
+      color: white;
+    }
+  }
 
   &__img {
     width: 7rem;
@@ -10,5 +19,8 @@
 
   &__description {
     font-family: secondary-font;
+    &--dark {
+      color: white;
+    }
   }
 }

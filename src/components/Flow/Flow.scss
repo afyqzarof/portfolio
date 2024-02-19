@@ -15,3 +15,9 @@
     display: none;
   }
 }
+
+.background {
+  &--dark {
+    background-color: rgb(15, 14, 14);
+  }
+}
