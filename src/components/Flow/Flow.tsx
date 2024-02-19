@@ -19,6 +19,7 @@ import Contact from "../Contact/Contact";
 import AboutMe from "../AboutMe/AboutMe";
 import Links from "../Links/Links";
 import DarkModeBtn from "../DarkModeBtn/DarkModeBtn";
+import useIsDark from "../../hooks/useIsDark";
 const nodeTypes: NodeTypes = {
   Intro,
   Title,
@@ -35,6 +36,9 @@ function Flow() {
   const mobile = (): boolean => {
     return screenWidth <= 480;
   };
+  const isDark = useIsDark();
+  console.log(isDark);
+
   return (
     <div className="page-wrapper">
       <Header />
