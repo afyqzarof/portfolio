@@ -1,5 +1,4 @@
 import "./Header.scss";
-// import { useCallback } from "react";
 import { useReactFlow } from "reactflow";
 
 const Header = () => {
@@ -38,7 +37,7 @@ const Header = () => {
             handleTransform(-100, 0, 0.4, 1000);
             return;
           }
-          handleTransform(-200, -100, 1, 1000);
+          handleTransform(-50, -100, 0.7, 1000);
         }}>
         projects
       </button>

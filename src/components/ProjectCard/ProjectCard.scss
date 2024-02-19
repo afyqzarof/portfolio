@@ -7,6 +7,9 @@
     @include flex(row, flex-start, flex-end);
     margin-bottom: 0.7rem;
   }
+  &__title {
+    font-size: 1.5rem;
+  }
   &__img {
     height: 1.6rem;
     margin-right: 0.8rem;
@@ -14,5 +17,34 @@
   &__description {
     font-family: secondary-font;
     margin-bottom: 0.7rem;
+    font-size: 1.2rem;
+  }
+  &__video {
+    width: 100%;
+    aspect-ratio: 16/9;
+    margin-bottom: 1rem;
+  }
+  &__link {
+    margin-bottom: 0.3rem;
+    color: rgb(89, 8, 180);
+    &:hover {
+      color: rgb(243, 31, 31);
+    }
+    &--cta {
+      padding: 0.4rem 0.5rem;
+      background-color: rgb(249, 249, 35);
+      color: black;
+      text-decoration: none;
+      border-radius: 1px;
+      font-weight: 700;
+      border: 3px solid black;
+      font-size: 1.1rem;
+
+      &:hover {
+        background-color: black;
+        color: rgb(249, 249, 35);
+        border: 3px solid rgb(249, 249, 35);
+      }
+    }
   }
 }
