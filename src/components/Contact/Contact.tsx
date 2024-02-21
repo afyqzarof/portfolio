@@ -2,8 +2,10 @@ import React, { useState } from "react";
 import "./Contact.scss";
 import { NodeProps, Handle, Position } from "reactflow";
 import emailjs from "@emailjs/browser";
+import useIsDark from "../../hooks/useIsDark";
 
 const Contact = ({ isConnectable }: NodeProps) => {
+  const isDark = useIsDark();
   const serviceId = import.meta.env.VITE_SERVICE_ID;
   const templateId = import.meta.env.VITE_TEMPLATE_ID;
   const publicKey = import.meta.env.VITE_PUBLIC_KEY;
@@ -84,16 +86,20 @@ const Contact = ({ isConnectable }: NodeProps) => {
     }
   };
   return (
-    <article className="contact">
+    <article className={`contact ${isDark ? "contact--dark" : ""}`}>
       <Handle
         type="source"
         position={Position.Right}
         id="a"
         isConnectable={isConnectable}
       />
-      <h2>contact me</h2>
+      <h2 className={`contact__title ${isDark ? "contact__title--dark" : ""}`}>
+        contact me
+      </h2>
       <form className="form" onSubmit={handleSubmit}>
-        <label htmlFor="name" className="form__label">
+        <label
+          htmlFor="name"
+          className={`form __label ${isDark ? "form__label--dark" : ""}`}>
           name
         </label>
         <input
@@ -101,31 +107,35 @@ const Contact = ({ isConnectable }: NodeProps) => {
           name="name"
           id="name"
           placeholder="enter name"
-          className="form__input"
+          className={`form__input ${isDark ? "form__input--dark" : ""}`}
           onChange={handleChange}
           value={formFields.name}
         />
         {formErrors.name && <p className="form__error">{formErrors.name}</p>}
-        <label htmlFor="email" className="form__label">
+        <label
+          htmlFor="email"
+          className={`form __label ${isDark ? "form__label--dark" : ""}`}>
           email
         </label>
         <input
           type="text"
           name="email"
           id="email"
-          className="form__input"
+          className={`form__input ${isDark ? "form__input--dark" : ""}`}
           placeholder="enter email"
           onChange={handleChange}
           value={formFields.email}
         />
         {formErrors.email && <p className="form__error">{formErrors.email}</p>}
-        <label htmlFor="message" className="form__label">
+        <label
+          htmlFor="message"
+          className={`form __label ${isDark ? "form__label--dark" : ""}`}>
           message
         </label>
         <textarea
           name="message"
           id="message"
-          className="form__textarea"
+          className={`form__textarea ${isDark ? "form__textarea--dark" : ""}`}
           placeholder="how can i help?"
           onChange={handleChange}
           value={formFields.message}
@@ -140,7 +150,9 @@ const Contact = ({ isConnectable }: NodeProps) => {
         </div>
         <button
           type="submit"
-          className={success ? "form__btn form__btn--success" : "form__btn"}>
+          className={`form__btn ${isDark ? "form__btn--dark" : ""} ${
+            success ? "form__btn--success" : ""
+          }`}>
           {success ? "sent" : "send"}
         </button>
       </form>

@@ -5,9 +5,17 @@
   width: 35rem;
   padding-bottom: 0;
 
+  &--dark {
+    @include card-dark;
+  }
+
   &__para {
     font-family: secondary-font;
     line-height: 130%;
     margin-bottom: 1rem;
+
+    &--dark {
+      color: white;
+    }
   }
 }

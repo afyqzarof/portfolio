@@ -3,6 +3,16 @@
 .contact {
   @include card;
   width: 20rem;
+
+  &--dark {
+    @include card-dark;
+  }
+
+  &__title {
+    &--dark {
+      color: white;
+    }
+  }
 }
 
 .form {
@@ -13,6 +23,10 @@
     margin-top: 0.5rem;
     margin-bottom: 0.2rem;
     font-size: 1.1rem;
+
+    &--dark {
+      color: white;
+    }
   }
 
   &__input {
@@ -20,6 +34,8 @@
     padding: 0.3rem;
     font-family: secondary-font;
     font-size: 1.1rem;
+    border: 2px solid rgb(248, 234, 234);
+
     &::placeholder {
       font-family: secondary-font;
     }
@@ -27,12 +43,28 @@
       outline: none;
       border: 2px solid black;
     }
+    &--dark {
+      background-color: black;
+      border-color: rgb(52, 51, 51);
+      color: white;
+      &:focus {
+        border: 2px solid white;
+      }
+
+      &::placeholder {
+        color: rgb(123, 120, 120);
+      }
+    }
   }
 
   &__textarea {
     @extend .form__input;
     height: 10rem;
     resize: none;
+
+    &--dark {
+      @extend .form__input--dark;
+    }
   }
   &__error {
     width: 70%;
@@ -61,6 +93,11 @@
     margin-top: 1rem;
     font-weight: 700;
     font-size: 1rem;
+
+    &--dark {
+      background-color: white;
+      color: black;
+    }
 
     &--success {
       background-color: rgb(3, 175, 3);

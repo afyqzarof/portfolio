@@ -6,6 +6,10 @@
   &__title {
     font-size: 4rem;
 
+    &--dark {
+      color: white;
+    }
+
     @include mobile {
       font-size: 3.5rem;
     }
