@@ -1,3 +1,4 @@
+import useIsDark from "../../hooks/useIsDark";
 import "./ProjectCard.scss";
 import { Handle, Position, NodeProps } from "reactflow";
 
@@ -6,14 +7,23 @@ type Link = {
   url: string;
 };
 const ProjectCard = ({ data }: NodeProps) => {
+  const isDark = useIsDark();
   return (
-    <article className="project">
+    <article className={isDark ? "project project--dark" : "project"}>
       <Handle type="target" position={Position.Top} />
       <div className="project__title-wrapper">
         <img src={data.imgSrc} alt="studio logo" className="project__img" />
-        <h3 className="project__title">{data.name}</h3>
+        <h3
+          className={`project__title ${isDark ? "project__title--dark" : ""}`}>
+          {data.name}
+        </h3>
       </div>
-      <p className="project__description">{data.description}</p>
+      <p
+        className={`project__description ${
+          isDark ? "project__description--dark" : ""
+        }`}>
+        {data.description}
+      </p>
       {data.name === "studio" && (
         <iframe
           className="project__video"
@@ -27,11 +37,9 @@ const ProjectCard = ({ data }: NodeProps) => {
           rel="noopener"
           target="_blank"
           key={index}
-          className={
-            link.name === "website"
-              ? "project__link project__link--cta"
-              : "project__link"
-          }>
+          className={`project__link ${
+            link.name === "website" ? "project__link--cta" : ""
+          } ${isDark ? "project__link--dark" : ""}`}>
           {link.name}
         </a>
       ))}

@@ -22,8 +22,10 @@
       font-size: 2rem;
     }
     &:hover {
-      font-size: 3.5rem;
-      color: rgba(243, 31, 31, 0.735);
+      // font-size: 3.5rem;
+      // color: rgba(243, 31, 31, 0.735);
+      text-decoration: underline;
+      color: rgb(89, 8, 180);
       // background-color: black;
       @include mobile {
         font-size: 2.1rem;
