@@ -14,6 +14,10 @@
   @include mobile {
     display: none;
   }
+
+  &--dark {
+    background-color: black !important;
+  }
 }
 
 .background {

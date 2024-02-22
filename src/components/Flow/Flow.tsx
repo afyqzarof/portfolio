@@ -65,7 +65,11 @@ function Flow() {
             size={4}
           />
           <Controls />
-          <MiniMap zoomable pannable className="minimap" />
+          <MiniMap
+            zoomable
+            pannable
+            className={`minimap ${isDark ? "minimap--dark" : ""}`}
+          />
         </ReactFlow>
       </main>
     </div>

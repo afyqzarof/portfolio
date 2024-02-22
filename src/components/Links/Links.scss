@@ -4,6 +4,10 @@
   width: 20rem;
   height: 10rem;
   @include flex(row, space-around);
+
+  &--dark {
+    @include card-dark;
+  }
   &__logo {
     height: 7rem;
     transition: all 100ms ease-in;
