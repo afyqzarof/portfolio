@@ -1,10 +1,17 @@
+@use "../../partials/breakpoints" as *;
 .dark-btn {
   position: absolute;
   top: 2rem;
   right: 2rem;
-  background-color: black;
   color: white;
   cursor: pointer;
   z-index: 100;
   padding: 1rem;
+  height: 6rem;
+
+  @include mobile {
+    top: 1rem;
+    right: 1rem;
+    height: 5rem;
+  }
 }

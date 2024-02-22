@@ -55,7 +55,8 @@ function Flow() {
           onNodesChange={onNodesChange}
           onEdgesChange={onEdgesChange}
           nodeTypes={nodeTypes}
-          deleteKeyCode={null}>
+          deleteKeyCode={null}
+          panOnScroll>
           <Background
             id="2"
             variant={BackgroundVariant.Dots}
