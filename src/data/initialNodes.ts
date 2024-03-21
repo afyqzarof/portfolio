@@ -1,6 +1,9 @@
 import { Node } from "reactflow";
 import studioLogo from "../assets/images/studio-flavicon.svg";
 import duckyLogo from "../assets/images/duck-logo.svg";
+import duckVid from "../assets/videos/duck-screen-record.mp4";
+import musicVid from "../assets/videos/music-website.mp4";
+import sunflower from "../assets/images/sunflower.svg";
 
 const initialNodes: Node[] = [
   {
@@ -45,6 +48,7 @@ const initialNodes: Node[] = [
     data: {
       name: "debug_ducky",
       imgSrc: duckyLogo,
+      vidSrc: duckVid,
       description:
         "A website to help individuals learn to code that is inspired by the rubber duck method",
       links: [
@@ -59,6 +63,27 @@ const initialNodes: Node[] = [
       ],
     },
     position: { x: 1200, y: 500 },
+    type: "ProjectCard",
+  },
+  {
+    id: "5",
+    data: {
+      name: "afyq eyzar music website",
+      imgSrc: sunflower,
+      vidSrc: musicVid,
+      description: "A website to promote music",
+      links: [
+        {
+          name: "website",
+          url: "https://music.afyq.xyz",
+        },
+        {
+          name: "github",
+          url: "https://github.com/afyqzarof/music-website",
+        },
+      ],
+    },
+    position: { x: 800, y: 1200 },
     type: "ProjectCard",
   },
   {

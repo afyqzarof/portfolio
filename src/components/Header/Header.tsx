@@ -37,7 +37,7 @@ const Header = () => {
             handleTransform(-100, 0, 0.4, 1000);
             return;
           }
-          handleTransform(-50, -100, 0.7, 1000);
+          handleTransform(100, -100, 0.5, 1000);
         }}>
         projects
       </button>

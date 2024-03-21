@@ -24,12 +24,22 @@ const ProjectCard = ({ data }: NodeProps) => {
         }`}>
         {data.description}
       </p>
-      {data.name === "studio" && (
+      {data.name === "studio" ? (
         <iframe
           className="project__video"
           src="https://www.youtube.com/embed/Zglq145sEw0?si=DShmAiViJKtzHSGB"
           title="YouTube video player"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>
+      ) : (
+        <video
+          preload="auto"
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="project__video">
+          <source src={data.vidSrc} type="video/mp4" />
+        </video>
       )}
       {data.links?.map((link: Link, index: number) => (
         <a

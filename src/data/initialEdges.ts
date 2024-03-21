@@ -20,6 +20,12 @@ const initialEdges: Edge[] = [
     type: "step",
   },
   {
+    id: "2-5",
+    source: "projects",
+    target: "5",
+    type: "step",
+  },
+  {
     id: "intro-contact",
     source: "contact",
     target: "intro",
