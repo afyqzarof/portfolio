@@ -71,7 +71,7 @@ const initialNodes: Node[] = [
       name: "afyq eyzar music website",
       imgSrc: sunflower,
       vidSrc: musicVid,
-      description: "A website to promote music",
+      description: "A website to promote my music",
       links: [
         {
           name: "website",

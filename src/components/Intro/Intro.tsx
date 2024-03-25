@@ -17,7 +17,7 @@ const Intro = ({ isConnectable }: NodeProps) => {
       <img src={headShot} alt="professional head shot" className="intro__img" />
       <div>
         <h1 className={isDark ? "intro__title--dark" : "intro__title"}>
-          Hello, I'm Afyq
+          Hello, I'm AFYQ ZAROF
         </h1>
         <p
           className={`intro__description ${

@@ -23,7 +23,7 @@
   &__description {
     font-family: secondary-font;
     margin-bottom: 0.7rem;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     &--dark {
       color: white;
     }
@@ -34,20 +34,39 @@
     margin-bottom: 1rem;
   }
   &__link {
-    margin-bottom: 0.3rem;
+    text-decoration: none;
+    margin-bottom: 0.7rem;
     color: rgb(89, 8, 180);
+    font-size: 1.2rem;
+    padding: 0 0.3rem;
+    border-left: 1px solid rgb(89, 8, 180);
 
     &:hover {
       color: rgb(243, 31, 31);
     }
-    &--cta {
-      color: black;
-      border-radius: 1px;
-      font-weight: 700;
-      font-size: 1.1rem;
-    }
     &--dark {
       color: white;
+      border-color: white;
+    }
+    &--cta {
+      color: black;
+      border-radius: 2px;
+      border: solid 1px black;
+
+      &:hover {
+        background-color: black;
+        color: white;
+      }
+
+      &.project__link--dark {
+        color: white;
+        border-color: white;
+
+        &:hover {
+          background-color: white;
+          color: black;
+        }
+      }
     }
   }
 }
